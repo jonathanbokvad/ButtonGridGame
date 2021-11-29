@@ -35,15 +35,15 @@
             {
                 <div class="line-break"></div>
             }
-            <button class="game-button" name="buttonNumber" value=@Model.ElementAt(i).Id type="submit" asp-controller="button" asp-action="HandleButtonClick">
-
-                @*Show button image according to the button state property*@
-                <img class="game-button-image" src="~/images/@imageNames[Model.ElementAt(i).ButtonState]" />
-
-                <div class="button-label">
-                    @Model.ElementAt(i).Id, @Model.ElementAt(i).ButtonState
-                </div>
-            </button>
+            <div class="oneButton" id="@i">
+                <button class="game-button" name="buttonNumber" value=@Model.ElementAt(i).Id type="submit" asp-controller="button" asp-action="HandleButtonClick">
+                    @*Show button image according to the button state property*@
+                    <img class="game-button-image" src="~/images/@imageNames[Model.ElementAt(i).ButtonState]" />
+                    <div class="button-label">
+                        @Model.ElementAt(i).Id, @Model.ElementAt(i).ButtonState
+                    </div>
+                </button>
+            </div>
         }
     </div>
 </form>

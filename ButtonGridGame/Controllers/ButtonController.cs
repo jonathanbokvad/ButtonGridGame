@@ -28,6 +28,7 @@ namespace ButtonGridGame.Controllers
             buttons.ElementAt(bn).ButtonState = (buttons.ElementAt(bn).ButtonState + 1) % 4;
 
             return View("Index", buttons);
+
         }
         public IActionResult ShowOneButton(int buttonNumber)
         {
